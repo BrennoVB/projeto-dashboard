@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+
+    <form >
+        <label for="inome">Nome: </label>
+        <input type="text" name="nome" id="inome" required placeholder="João">
+
+        <br> <!--Momentaneo até adicionar CSS-->
+
+        <label for="iemail">Email: </label>
+        <input type="email" name="email" id="iemail" required  placeholder="xxxxxxxxxx@gmail.com">
+
+        <br> <!--Momentaneo até adicionar CSS-->
+        
+        <label for="itelefone">Telefone: </label>
+        <input type="tel" name="telefone" id="itelefone" required type="number" placeholder="xx xxxxx-xxxx">
+
+        <br> <!--Momentaneo até adicionar CSS-->
+    </form>
+
+    <label for="ibusca">Buscar nome: </label>
+    <input type="search" name="busca" id="ibuscar">
+
+    <br> <!--Momentaneo até adicionar CSS-->
+
+    <button id="btn-cadastrar">Cadastrar</button>
+
+    <div id="lista-clientes">
+
+    </div>
+
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
