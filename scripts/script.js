@@ -1,6 +1,6 @@
-const sistema = {
+const sistema = { // Objeto principal do JS, é aqui onde vai conter a maior parte das funções (metodos) e configurações de usando lógica
     clientes: [],
-    cadastrar: function(nome, email, telefone){
+    cadastrar: function(nome, email, telefone){ // Metodo onde fica salvo os usuarios cadastrados
         let cxNome = document.getElementById('inome')
         let cxEmail = document.getElementById("iemail")
         let cxTelefone = document.getElementById('itelefone')
@@ -13,11 +13,11 @@ const sistema = {
          return
         }
 
-        const informacoes = {id: proximoId, nome: valorNome, email: valorEmail, telefone: valorTel}
+        const informacoes = {id: proximoId, nome: valorNome, email: valorEmail, telefone: valorTel} 
 
         proximoId ++
 
-        this.clientes.push(informacoes)
+        this.clientes.push(informacoes) // Aqui é onde fica salvo os dados enviado pelo usurario
 
         cxNome.value = ''
         cxEmail.value = ''
@@ -25,7 +25,7 @@ const sistema = {
 
         renderizar(this.clientes)
     },
-    remover: function(id){
+    remover: function(id){ // Função onde removemos um usuario da lista de cadastrados
         let novalista = []
 
         for(let i = 0; i < this.clientes.length; i++){
@@ -38,12 +38,11 @@ const sistema = {
 
         renderizar(novalista)
     },
-    editar: function(id, novoTelefone){
-        let recebeuID
+    editar: function(id, novoTelefone){ // Função onde editamos o número de telefone do usuario (coloquei somente essa para não ser um projeto longo)
 
         for(let i = 0; i < this.clientes.length; i++){
             if(this.clientes[i].id == id){
-                let novoTel = prompt('Digite seu novo telefone: ')
+                let novoTel = prompt('Digite seu novo telefone: ') // Aqui é a parte onde pedimos o novo número
                 this.clientes[i].telefone = novoTel
             }
             
@@ -52,16 +51,16 @@ const sistema = {
         renderizar(this.clientes)
         
     },
-    buscar: function(nome){
+    buscar: function(nome){ // Função que buscamos os nomes dos usuarios cadastrados
         let cxBuscar = document.getElementById("ibuscar")
         let listaFiltrada = []
 
-        if(cxBuscar.value == ''){
+        if(cxBuscar.value == ''){ // Aqui funciona da seguinte forma, se a caixa buscar tiver vazia mostra toda a lista de usuarios cadastrados, se não vai mostrar somente o nome que foi digitado
             renderizar(this.clientes)
             return
         }
 
-        for(let i = 0; i < this.clientes.length; i++){
+        for(let i = 0; i < this.clientes.length; i++){ // Nesse campo é onde o sistema procura o usuario de acordo com as letras digitada no campo.
             if(this.clientes[i].nome.includes(cxBuscar.value)){
                 
 
@@ -70,15 +69,12 @@ const sistema = {
         }
         
         renderizar(listaFiltrada)
-    },
-    listar: function(filtro){
-
     }
 }
 
-let proximoId = 1
+let proximoId = 1 // Variavel global que inicia em 1
 
-function renderizar(lista){
+function renderizar(lista){ // Função onde mostra cada usuario e suas informações
     let listaClientes = document.getElementById('lista-clientes')
 
     let html = ''
@@ -92,7 +88,7 @@ function renderizar(lista){
     
 }    
 
-document.getElementById("btn-cadastrar").onclick = function(){
+document.getElementById("btn-cadastrar").onclick = function(){ 
     sistema.cadastrar()
 }
 

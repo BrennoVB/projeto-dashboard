@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-*{
+*{ /* Configurações global*/
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
+body{ /*Configuração do corpo HTML*/
     background-color: #c8c8c8;
     color: #2d2d2d;
     font-family: Arial, Helvetica, sans-serif;
@@ -16,13 +16,13 @@ body{
     padding: 10px;
 }
 
-h1{
+h1{ /*Configuração titulo principal*/
     color: #6C63FF;
     margin-bottom: 10px;
     text-align: center;
 }
 
-div#central{
+div#central{ /* Configuração da div onde fica o local de cadastro */
     background-color: #ffffff;
     border-radius: 5px;
     padding: 30px;
@@ -33,7 +33,7 @@ div#central{
     border: 1px solid #ddd
 }
 
-input{
+input{ /* Configuração das caixas onde o usuario adiciona o texto*/
     width: 100%;
     padding: 8px;
     border-radius: 5px;
@@ -42,8 +42,8 @@ input{
     outline: none;
 }
 
-div#area-buscar{
-     background-color: #ffffff;
+div#area-buscar{ /* Configuração do local onde o usuario busca o nome cadastrado*/
+    background-color: #ffffff;
     border-radius: 5px;
     padding: 30px;
     max-width: 500px;
@@ -53,7 +53,7 @@ div#area-buscar{
     border: 1px solid #ddd
 }
 
-button#btn-cadastrar{
+button#btn-cadastrar{ /*Configuração do botão "Cadastrar" */
     width: 100%;
     background-color: #6C63FF;
     color: white;
@@ -63,11 +63,11 @@ button#btn-cadastrar{
     cursor: pointer;
 }
 
-button#btn-cadastrar:hover{
+button#btn-cadastrar:hover{ /* Configuração do botão "Cadastrar" ao passar o mouse*/
     background-color: #5a52d5;
 }
 
-div.card-cliente{
+div.card-cliente{ /* Configuração do local onde fica a lista de clientes cadastrados */
     background-color: white;
     border-radius: 5px;
     padding: 10px;
@@ -76,27 +76,33 @@ div.card-cliente{
     border: 1px solid #ddd;
 }
 
-button{
+button{ /* Configuração geral dos botões "editar" e do botão "remover" */
     border: none;
     border-radius: 5px;
     padding: 10px;
     margin-right: 5px;
 }
 
-button.btn-editar{
+button.btn-editar{ /* Configuração do botão editar*/
     background-color: #6C63FF;
     margin-left: 5px;
 }
-button.btn-remover{
+button.btn-remover{ /* Configuração do botão remover*/
     background-color: #ff4d4d;
 }
 
-button.btn-editar:hover{
+button.btn-editar:hover{ /* Configuração do botão editar ao passar o mouse*/
     background-color: #6b63ffb0;
     cursor: pointer;
 }
 
-button.btn-remover:hover{
+button.btn-remover:hover{ /* Configuração do botão remover ao passar o mouse*/
     background-color: #ff4d4daf;
     cursor: pointer;
+}
+
+@media (max-width: 480px) { /* Configuração da responsividade para telas menores */
+    div#central, div#area-buscar {
+        padding: 15px;
+    }
 }
