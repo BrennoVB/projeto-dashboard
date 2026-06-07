@@ -8,30 +8,26 @@
 </head>
 <body>
     <h1>Cadastro de Clientes</h1>
-
-    
-        <label for="inome">Nome: </label>
-        <input type="text" name="nome" id="inome" required placeholder="João">
-
-        <br> <!--Momentaneo até adicionar CSS-->
-
-        <label for="iemail">Email: </label>
-        <input type="email" name="email" id="iemail" required  placeholder="xxxxxxxxxx@gmail.com">
-
-        <br> <!--Momentaneo até adicionar CSS-->
         
-        <label for="itelefone">Telefone: </label>
-        <input type="tel" name="telefone" id="itelefone" required type="number" placeholder="xx xxxxx-xxxx" maxlength="11">
+            <div id="central">
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome" required placeholder="João">
+                
+                <label for="iemail">Email: </label>
+                <input type="email" name="email" id="iemail" required  placeholder="xxxxxxxxxx@gmail.com">
+                
+                
+                <label for="itelefone">Telefone: </label>
+                <input type="tel" name="telefone" id="itelefone" required type="number" placeholder="xx xxxxx-xxxx" maxlength="11">
+                    
+                <button id="btn-cadastrar">Cadastrar</button>
 
-        <br> <!--Momentaneo até adicionar CSS-->
-    
+            </div>
 
-    <label for="ibusca">Buscar nome: </label>
-    <input type="search" name="busca" id="ibuscar">
-
-    <br> <!--Momentaneo até adicionar CSS-->
-
-    <button id="btn-cadastrar">Cadastrar</button>
+            <div id="area-buscar">
+                <label for="ibusca">Buscar nome: </label>
+                <input type="search" name="busca" id="ibuscar">
+            </div>
 
     <div id="lista-clientes">
 

@@ -1,1 +1,102 @@
 @charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #c8c8c8;
+    color: #2d2d2d;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+h1{
+    color: #6C63FF;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+div#central{
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.253);
+    border: 1px solid #ddd
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+div#area-buscar{
+     background-color: #ffffff;
+    border-radius: 5px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.253);
+    border: 1px solid #ddd
+}
+
+button#btn-cadastrar{
+    width: 100%;
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button#btn-cadastrar:hover{
+    background-color: #5a52d5;
+}
+
+div.card-cliente{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.253);
+    border: 1px solid #ddd;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+button.btn-editar{
+    background-color: #6C63FF;
+    margin-left: 5px;
+}
+button.btn-remover{
+    background-color: #ff4d4d;
+}
+
+button.btn-editar:hover{
+    background-color: #6b63ffb0;
+    cursor: pointer;
+}
+
+button.btn-remover:hover{
+    background-color: #ff4d4daf;
+    cursor: pointer;
+}

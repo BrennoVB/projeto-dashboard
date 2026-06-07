@@ -84,7 +84,7 @@ function renderizar(lista){
     let html = ''
 
     for(let i = 0; i < lista.length; i++){
-        html += '<div>' + lista[i].nome + ' ' + lista[i].email + ' ' + lista[i].telefone + '<button onclick="sistema.editar(' + lista[i].id + ')">Editar</button>' + '<button onclick="sistema.remover(' + lista[i].id + ')">Remover</button>' + '</div>'
+        html += '<div class="card-cliente">' + lista[i].nome + ' | ' + lista[i].email + ' | ' + lista[i].telefone + '<button class="btn-editar" onclick="sistema.editar(' + lista[i].id + ')">Editar</button>' + '<button class="btn-remover" onclick="sistema.remover(' + lista[i].id + ')">Remover</button>' + '</div>'
     
     }
 
